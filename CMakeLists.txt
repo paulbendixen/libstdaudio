@@ -16,6 +16,8 @@ endif ()
 
 if (APPLE)
     set(CMAKE_EXE_LINKER_FLAGS "-framework CoreAudio")
+elseif(UNIX)
+    set(CMAKE_EXE_LINKER_FLAGS "-lasound")
 endif ()
 
 include_directories(include)
